@@ -30,7 +30,7 @@ tableData.forEach(record => {
 var dateInput = d3.select("#datetime");
 
 //grab a reference to the city input field
-var cityInput = d3.select("#city");
+// var cityInput = d3.select("#city");
 
 //get filter button tag
 var button = d3.select("#filter-btn")
@@ -42,11 +42,11 @@ button.on("click", function() {
 var inputValue = dateInput.property("value");
 
 // get the value property of the city input element
-var cityInputValue = cityInput.property("value");
+// var cityInputValue = cityInput.property("value");
 
 
 //filter data based on the user input
-if (inputValue && cityInputValue) {var filteredData = tableData.filter(data => data.datetime == inputValue && data.city == cityInputValue);};
+if (inputValue) {var filteredData = tableData.filter(data => data.datetime == inputValue);};
 
 //clear the output
 tbody.html("")
